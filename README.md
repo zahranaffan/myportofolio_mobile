@@ -2,16 +2,24 @@
 
 A new Flutter project.
 
-## Getting Started
+## Tugas 7
 
-This project is a starting point for a Flutter application.
+1. Widget tree adalah struktur hierarki yang menggambarkan susunan widget dalam aplikasi Flutter. Setiap widget dapat memiliki widget lain sebagai anaknya (child), sehingga membentuk struktur bertingkat. Widget induk bertugas mengatur posisi, tata letak, atau tampilan widget anaknya. Contohnya, Scaffold menjadi induk dari AppBar dan body, sedangkan Column dapat memiliki beberapa Text atau InfoCard sebagai anaknya. Dengan struktur ini, tampilan aplikasi dapat disusun secara terorganisasi.
 
-A few resources to get you started if this is your first Flutter project:
+2. Dalam proyek MyPortfolio Mobile, saya menggunakan beberapa widget bawaan Flutter, seperti MaterialApp untuk mengatur konfigurasi utama aplikasi, Scaffold untuk menyediakan struktur dasar halaman, dan AppBar untuk menampilkan bagian header aplikasi. Saya juga menggunakan Text untuk menampilkan tulisan, TextStyle untuk mengatur tampilan teks, Padding untuk memberikan jarak, Column untuk menyusun widget secara vertikal, Row untuk menyusun widget secara horizontal, serta Center untuk meletakkan widget di tengah. Selain itu, terdapat Card untuk menampilkan informasi dalam bentuk kartu, Container sebagai wadah untuk mengatur tampilan dan ukuran widget, SizedBox untuk memberikan jarak, dan GridView.count untuk menyusun kartu menu dalam bentuk grid. Untuk bagian interaksi, saya menggunakan Material dan InkWell agar kartu memiliki tampilan serta efek ketika ditekan, Icon untuk menampilkan ikon, dan SnackBar untuk memberikan notifikasi sementara kepada pengguna. Saya juga membuat widget sendiri, yaitu InfoCard untuk menampilkan informasi NPM, nama, dan kelas, serta ItemCard untuk menampilkan kartu menu yang dapat ditekan. Selain itu, terdapat ItemHomepage sebagai model data untuk menyimpan nama menu dan ikon, meskipun bukan termasuk widget.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+3. MaterialApp berfungsi sebagai pembungkus utama aplikasi yang menyediakan fitur dan konfigurasi Material Design. Di dalamnya, kita dapat mengatur tema aplikasi, judul, navigasi, serta halaman awal melalui properti home. Widget ini umumnya digunakan sebagai root widget karena menjadi titik awal dari struktur widget tree dan menyediakan konfigurasi dasar yang dapat digunakan oleh widget-widget di bawahnya.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. StatelessWidget adalah widget yang tidak memiliki state internal yang dapat berubah selama aplikasi berjalan. Widget ini cocok digunakan untuk tampilan yang sifatnya statis dan tidak membutuhkan perubahan data secara langsung. Sementara itu, StatefulWidget adalah widget yang memiliki state yang dapat berubah selama aplikasi berjalan. Widget ini cocok digunakan ketika tampilan perlu diperbarui berdasarkan interaksi pengguna atau perubahan data, misalnya tombol penghitung angka. Dalam proyek ini, halaman MyHomePage menggunakan StatelessWidget karena informasi profil dan menu yang ditampilkan bersifat tetap, sehingga tidak memerlukan pengelolaan state yang dinamis.
+
+5. BuildContext merupakan objek yang merepresentasikan posisi sebuah widget di dalam widget tree. Objek ini penting karena memungkinkan widget mengakses informasi dari widget induk atau lingkungan di sekitarnya. Di dalam metode build, BuildContext digunakan sebagai parameter. Contohnya, pada proyek ini saya menggunakan Theme.of(context) untuk mengambil konfigurasi tema aplikasi dan MediaQuery.of(context) untuk mendapatkan informasi ukuran layar. Dengan begitu, tampilan widget dapat menyesuaikan tema maupun kondisi layar perangkat.
+
+6. Hot reload adalah fitur Flutter yang memungkinkan perubahan kode langsung diterapkan ke aplikasi tanpa harus menjalankan ulang aplikasi dari awal. Fitur ini mempertahankan state yang sedang berjalan sehingga proses pengembangan menjadi lebih cepat. Sementara itu, hot restart akan menjalankan ulang aplikasi dari awal sehingga state sebelumnya akan di-reset. Hot reload cocok digunakan ketika hanya mengubah tampilan atau memperbaiki bagian kode tertentu. Namun, jika perubahan melibatkan inisialisasi awal aplikasi atau perubahan state awal yang tidak dapat diterapkan melalui hot reload, kita perlu menggunakan hot restart. Sedangkan full restart diperlukan ketika perubahan membutuhkan proses kompilasi atau pembangunan ulang aplikasi secara menyeluruh, misalnya setelah mengubah konfigurasi native atau dependensi tertentu.
+
+AI Disclosure: Dalam pengerjaan proyek MyPortfolio Mobile, saya menggunakan ChatGPT untuk membantu memahami konsep Flutter, menyusun kode, serta mengatasi kendala instalasi dan error. Saya memberikan prompt berupa pertanyaan spesifik dan pesan error agar mendapat solusi yang sesuai. Seluruh saran AI tetap saya periksa dan uji secara mandiri, termasuk menggunakan flutter analyze, karena tidak semua solusi AI langsung sesuai dengan kondisi proyek. Contoh prompt:
+
+a. Bisa jelasin fungsi file-file yang ada di project Flutter ini?
+
+b. Kenapa muncul error pas aku jalanin flutter pub get atau flutter analyze?
+
+c. Gimana cara mengubah warna background, AppBar, dan tombol di aplikasi Flutter aku? Konsep warna di flutter juga gimana ya?
