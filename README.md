@@ -23,3 +23,22 @@ a. Bisa jelasin fungsi file-file yang ada di project Flutter ini?
 b. Kenapa muncul error pas aku jalanin flutter pub get atau flutter analyze?
 
 c. Gimana cara mengubah warna background, AppBar, dan tombol di aplikasi Flutter aku? Konsep warna di flutter juga gimana ya?
+
+
+## Tugas 8
+
+1. Navigator.push() digunakan untuk membuka halaman baru tanpa menghapus halaman sebelumnya dari navigation stack. Navigator.pushReplacement() digunakan untuk membuka halaman baru sekaligus menggantikan halaman sebelumnya, sedangkan Navigator.pop() digunakan untuk menutup halaman yang sedang dibuka dan kembali ke halaman sebelumnya. Untuk membuka formulir dari kartu aksi digunakan Navigator.push(). Sementara itu, opsi Home pada Drawer menggunakan Navigator.pushReplacement() agar pengguna kembali ke halaman utama tanpa harus melewati halaman-halaman sebelumnya.
+
+2. Scaffold berfungsi sebagai kerangka utama halaman yang menampung AppBar, Drawer, dan body. AppBar digunakan sebagai bagian atas halaman, sedangkan Drawer menyediakan menu navigasi untuk berpindah halaman. Penggunaan ketiga widget ini membuat struktur halaman lebih konsisten. Contohnya, warna utama tema portofolio digunakan pada AppBar di halaman utama dan halaman formulir agar tampilan aplikasi tetap seragam.
+
+3. Tata letak formulir menggunakan Column agar setiap input tersusun secara vertikal. Padding digunakan untuk memberikan jarak antara konten dengan tepi layar, sedangkan SizedBox digunakan untuk mengatur jarak antar-widget supaya formulir lebih rapi dan mudah dibaca. Selain itu, SingleChildScrollView digunakan agar seluruh isi formulir tetap bisa diakses dengan menggulir layar ketika ukuran layar terbatas atau ketika keyboard muncul.
+
+4.GlobalKey<FormState> digunakan untuk mengakses dan memeriksa kondisi Form, sedangkan validator berfungsi untuk memeriksa apakah input sudah sesuai dengan ketentuan. Ketika tombol Simpan ditekan, validate() akan menjalankan seluruh validator pada Form. Jika terdapat input yang tidak valid, pesan error akan ditampilkan dan data tidak dapat disimpan. Contohnya, kolom nama yang wajib diisi akan menolak nilai kosong. Pemilihan jenis input atau keyboard saja belum cukup karena hanya membantu membatasi atau mempermudah jenis input, bukan memastikan bahwa nilai yang dimasukkan sudah benar.
+
+AI Disclosure: Dalam pengerjaan tugas ini, saya menggunakan ChatGPT sebagai alat bantu belajar dan memahami konsep Flutter, khususnya mengenai navigasi menggunakan Navigator, struktur halaman dengan Scaffold, AppBar dan Drawer, penyusunan layout formulir, serta validasi input menggunakan Form. AI digunakan untuk membantu menjelaskan konsep, memberikan contoh penggunaan widget, dan membantu memahami pesan error ketika melakukan implementasi. Saya menggunakan pendekatan prompting berupa pertanyaan konseptual dan meminta penjelasan langkah demi langkah, bukan meminta AI untuk membuat keseluruhan kode secara langsung. Seluruh implementasi tetap saya kerjakan dan sesuaikan sendiri dengan kebutuhan proyek. Saya juga tetap memeriksa kembali saran yang diberikan AI karena penjelasannya terkadang kurang sesuai dengan struktur kode yang digunakan, sehingga diperlukan pemahaman dan penyesuaian secara manual. Contoh prompt:
+
+a. Apa perbedaan Navigator.push(), Navigator.pushReplacement(), dan Navigator.pop() dalam Flutter? Jelaskan bagaimana navigation stack bekerja dan berikan contoh situasi penggunaan masing-masing metode.
+
+b. Jelaskan fungsi Scaffold, AppBar, Drawer, Column, dan SingleChildScrollView dalam Flutter. Bagaimana widget-widget tersebut bekerja sama dalam membangun struktur halaman dan formulir yang responsif?
+
+c. Bagaimana mekanisme validasi formulir di Flutter menggunakan GlobalKey<FormState>, validator, dan validate()? Jelaskan alur yang terjadi ketika tombol Simpan ditekan dan mengapa validasi tetap diperlukan meskipun sudah menggunakan keyboard dengan tipe input tertentu.
