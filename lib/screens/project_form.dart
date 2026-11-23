@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myportofolio_mobile/widgets/gradient_app_bar.dart';
 import 'package:myportofolio_mobile/widgets/left_drawer.dart';
 // TODO: Impor drawer yang sudah dibuat sebelumnya
 
@@ -29,14 +30,12 @@ class _ProjectFormPageState extends State<ProjectFormPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: GradientAppBar(
         title: const Center(
           child: Text(
             'Add Project Form',
           ),
         ),
-        backgroundColor: Colors.indigo,
-        foregroundColor: Colors.white,
       ),
       // TODO: Tambahkan drawer yang sudah dibuat di sini
       drawer: const LeftDrawer(),
