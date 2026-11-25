@@ -51,9 +51,7 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: GradientAppBar(
-        title: const Text('Add Experience Form'),
-      ),
+      appBar: GradientAppBar(title: const Text('Add Experience Form')),
       drawer: const LeftDrawer(),
       body: Form(
         key: _formKey,

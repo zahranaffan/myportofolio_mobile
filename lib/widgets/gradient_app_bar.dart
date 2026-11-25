@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 
 /// AppBar bersama agar warna header konsisten di seluruh halaman.
 class GradientAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const GradientAppBar({
-    super.key,
-    required this.title,
-    this.centerTitle,
-  });
+  const GradientAppBar({super.key, required this.title, this.centerTitle});
 
   final Widget title;
   final bool? centerTitle;
@@ -28,10 +24,7 @@ class GradientAppBar extends StatelessWidget implements PreferredSizeWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
-              Color(0xFF42B6B3),
-              Color(0xFF07547F),
-            ],
+            colors: [Color(0xFF42B6B3), Color(0xFF07547F)],
           ),
         ),
       ),
